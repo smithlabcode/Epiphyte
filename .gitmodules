@@ -1,0 +1,6 @@
+[submodule "src/smithlab_cpp"]
+	path = src/smithlab_cpp
+	url = https://github.com/smithlabcode/smithlab_cpp.git
+[submodule "src/adssrc"]
+	path = src/adssrc
+	url = https://github.com/andrewdavidsmith/adssrc.git
