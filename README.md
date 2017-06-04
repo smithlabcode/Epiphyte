@@ -14,7 +14,7 @@ git clone --recursive https://github.com/smithlabcode/Epiphyte.git
 ```
 Because ``Epiphyte`` depends on ``methpipe``, if you haven't downloaded ``methpipe`` package, please also type
 ```
-git clone --recursive https://github.com/smithlabcode/methpipe
+git clone --recursive https://github.com/smithlabcode/methpipe.git
 ```
 
 ## Installation
