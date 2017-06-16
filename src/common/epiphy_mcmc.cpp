@@ -21,7 +21,7 @@
 #include <vector>
 #include <random>
 #include <iostream>
-#include <math.h>       /* pow */
+#include <cmath>       /* pow */
 #include <algorithm>  //std::max, min
 #include <boost/math/distributions/students_t.hpp>
 
@@ -177,7 +177,7 @@ within_variance(const vector<vector<vector<double> > > &y,
   for (size_t i = 0; i < n_var; ++i) {
     for (size_t j = 0; j < n_chain; ++j) {
       for (size_t k = 0; k < n_samp; ++k) {
-        y_within_variance[i] += pow(y[j][k][i] - y_within_mean[j][i], 2);
+        y_within_variance[i] += std::pow(y[j][k][i] - y_within_mean[j][i], 2);
       }
     }
     y_within_variance[i] /= n_chain*(n_samp - 1);
@@ -195,7 +195,7 @@ btwn_variance(const vector<vector<double> > &y_within_mean,
   y_btwn_variance = vector<double>(n_var);
   for (size_t i = 0; i < n_var; ++i) {
     for (size_t j = 0; j < n_chain; ++j) {
-      y_btwn_variance[i] += pow(y_within_mean[j][i] - y_overall_mean[i], 2);
+      y_btwn_variance[i] += std::pow(y_within_mean[j][i] - y_overall_mean[i], 2);
     }
     y_btwn_variance[i] = y_btwn_variance[i]*n_samp/(n_chain - 1);
   }
