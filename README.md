@@ -19,17 +19,17 @@ git clone --recursive https://github.com/smithlabcode/methpipe.git
 
 ## Installation
 
-Before attempting to compile Epiphyte please make sure that 
+Before attempting to compile Epiphyte please make sure:
 
  - GNU Scientific Library (<http://www.gnu.org/software/gsl/>) 
-   is installed on your system, and 
- - path to the root directory of header-only Boost libraries (<http://www.boost.org/>) is 
-   defined in the environment variable BOOST_ROOT  
+   is installed on your system.
+ - Header-only Boost libraries (<http://www.boost.org/>) exist in the system under the default directory `/usr/include`.
+   Otherwise, specify the customized location of boost in the environment variable `BOOST_ROOT`:
    ```  
    export BOOST_ROOT=/path/to/boost_1_64_0
    ```
  - path to Methpipe (<https://github.com/smithlabcode/methpipe>) is  
-   defined in the environment variable METHPIPE_ROOT 
+   defined in the environment variable `METHPIPE_ROOT`: 
    ```  
    export METHPIPE_ROOT=/path/to/methpipe
    ```
