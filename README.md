@@ -67,7 +67,6 @@ Usage: ``indep-epi-phylo [OPTIONS] <newick> <meth-tab>``
 
 |Option| Long tag    | Type| Default | Description |
 | ---- | :---------- |:----| :-------| :---------- |  
-| -c   | -counts    | bool | false   | meth-table contains read counts |
 | -p   | -params    | str  | null    | use given parameters and skip optimization |
 |  -i  | -iteration | int  | 100     | maximum number of iteration  
 |  -n  | -nodemap   | bool | false   | output MAP states of individual nodes|
