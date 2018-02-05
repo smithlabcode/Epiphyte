@@ -29,9 +29,14 @@ ifndef METHPIPE_DIR
 METHPIPE_DIR=$(METHPIPE_ROOT)/src/common
 endif
 
+
 ifndef BOOST_ROOT
-BOOST_ROOT=$(realpath ../boost_1_64_0)
-endif
+ifeq ("$(wildcard /usr/include/boost)","")
+$(error need to set variable BOOST_ROOT)
+else
+BOOST_ROOT = /usr/include/
+endif	
+endif 
 
 PROGS = indep-methprob indep-epi-phylo epiphy-sim epiphy-est \
 	epiphy-post epiphy-seg 

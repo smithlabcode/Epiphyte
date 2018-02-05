@@ -27,9 +27,15 @@ ifndef TREETOOL
 TREETOOL=$(realpath adssrc/treetool)
 endif
 
-ifndef BOOST
-BOOST=$(realpath boost_1_64_0)
-endif
+
+ifndef BOOST_ROOT
+ifeq ("$(wildcard /usr/include/boost)","")
+$(error need to set variable BOOST_ROOT)
+else
+BOOST_ROOT = /usr/include/
+endif	
+endif 
+
 
 all:
 	@for i in $(app_subdirs); do \
