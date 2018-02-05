@@ -36,6 +36,11 @@ $(error could not set TREETOOL variable)
 endif
 endif
 
+ifndef METHPIPE_ROOT
+$(error METHPIPE_ROOT is not set)
+endif
+
+
 all:
 	@make -C src EPIPHYTE_ROOT=$(EPIPHYTE_ROOT) OPT=1
 
